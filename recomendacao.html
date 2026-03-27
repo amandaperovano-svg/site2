@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recomendações</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(to right, #0047AB, #00aaff);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.card{
+    background: white;
+    color: black;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Recomendações pra você</h1>
+
+<p id="texto"></p>
+<div id="lista"></div>
+
+<button onclick="history.back()">Voltar</button>
+
+<script>
+let busca = new URLSearchParams(window.location.search).get("busca") || "";
+busca = busca.toLowerCase();
+
+document.getElementById("texto").innerText = "Você buscou: " + busca;
+
+let lista = document.getElementById("lista");
+
+function criarMusica(nome){
+    lista.innerHTML += `<div class="card">${nome}</div>`;
+}
+
+let musicas = [
+    "Someone Like You - Adele",
+    "Fix You - Coldplay",
+    "All I Want - Kodaline",
+    "Happier - Olivia Rodrigo",
+    "Let Her Go - Passenger",
+    "Heather - Conan Gray",
+    "Traitor - Olivia Rodrigo",
+    "When I Was Your Man - Bruno Mars",
+    "The Night We Met - Lord Huron",
+    "Jealous - Labrinth",
+    "On Top of the World - Imagine Dragons",
+    "Best Day of My Life - American Authors",
+    "Sugar - Maroon 5",
+    "Firework - Katy Perry",
+    "Counting Stars - OneRepublic",
+    "Wake Me Up - Avicii",
+    "Perfect - Ed Sheeran",
+    "All of Me - John Legend",
+    "Stay With Me - Sam Smith",
+    "Love Yourself - Justin Bieber",
+    "Envolver - Anitta",
+    "Vai Malandra - Anitta",
+    "SentaDONA - Luísa Sonza",
+    "Tá OK - DENNIS DJ",
+    "God's Plan - Drake",
+    "HUMBLE - Kendrick Lamar",
+    "Lucid Dreams - Juice WRLD",
+    "Lose Yourself - Eminem",
+    "SICKO MODE - Travis Scott",
+    "Blinding Lights - The Weeknd",
+    "Shape of You - Ed Sheeran",
+    "Levitating - Dua Lipa",
+    "Stay - The Kid LAROI & Justin Bieber"
+];
+
+musicas.forEach(criarMusica);
+</script>
+
+
+</body>
+</html>

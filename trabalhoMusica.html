@@ -1,0 +1,136 @@
+<!DOCTYPE 
+html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Músicas</title>
+
+<style>
+        body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(#e3f2fd, #ffffff);
+}
+
+.cabecalho {
+    background: linear-gradient(#0047AB, #00aaff);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.busca {
+    margin-top: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #0047AB;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #002f6c;
+}
+
+.container {
+    display: flex;
+}
+
+.esquerda, .direita {
+    width: 25%;
+    background: #87CEEB;
+    padding: 15px;
+}
+
+.principal {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+.rodape {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cabecalho">
+    <h1>Mundo da Música</h1>
+
+    <div class="busca">
+        <input type="text" id="buscar" placeholder="Buscar gênero">
+        <button onclick="irParaRecomendacao()">Buscar</button>
+        <button onclick="location.reload()">Voltar</button>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="esquerda">
+    <strong>Menu</strong>
+    <div class="card">Sinta o ritmo</div>
+    <div class="card">Cada batida conta uma história</div>
+    <div class="card">A música conecta pessoas</div>
+    <div class="card">Relaxe com o som</div>
+</div>
+
+<div class="principal">
+    <h2>Conectados pelo Som</h2>
+    <p>A música fala o que o coração sente.</p>
+
+    <img src="show.jpg">
+
+    <p>
+        A música tem o poder de conectar pessoas e criar momentos únicos.
+    </p>
+
+    <h3>🎼 Gêneros Musicais</h3>
+    <div class="card">Pop</div>
+    <div class="card">Rock</div>
+    <div class="card">Funk</div>
+    <div class="card">Rap</div>
+    <div class="card">Sertanejo</div>
+</div>
+
+<div class="direita">
+    <strong>Informações</strong>
+    <div class="card">A música está presente em todos os momentos da vida.</div>
+    <div class="card">Cada estilo musical transmite uma emoção diferente.</div>
+    <div class="card">Ela ajuda a expressar sentimentos.</div>
+</div>
+
+</div>
+
+<div class="rodape">
+conexão | sentimento | expressão
+</div>
+
+<script>
+function irParaRecomendacao(){
+    let valor = document.getElementById("buscar").value;
+    window.location.href = "recomendacao.html?busca=" + valor;
+}
+</script>
+
+</body>
+</html>
